@@ -1,0 +1,99 @@
+/* BODY */
+
+body{
+    box-sizing: border-box;
+    background-color: white;
+    color: grey;
+    padding: 1%;
+}
+
+.app{
+    border-radius: 30px;
+    background-color: whitesmoke;
+}
+
+div {
+    color: rgba(128, 128, 128, 1);
+}
+
+/* HEADER */
+
+.site-header{
+    height: 5%;
+    
+}
+
+#headerMessageText{
+    margin: 0px !important;
+    background-color: darkgrey;
+}
+
+.site-header > div {
+    height: 100%;
+}
+
+.site-header > div > div {
+    height: 100%;
+}
+
+.site-header > div > div > div:first-child {
+    border-top-left-radius: 30px;
+}
+
+.site-header > div > div > div:last-child {
+    border-top-right-radius: 30px;
+}
+
+.site-header > div > div > div {
+    height: 100%;
+    /* color:white; */
+    font-weight: bold;
+    text-align: center;
+    border-top: solid 1px grey;
+    border-bottom: solid 1px grey;
+    border-left: solid 1px grey;
+    /* background-color: black; */
+}
+
+.site-header > div > div > div:last-child {
+   border-right: solid 1px grey;
+}
+
+.play-or-pause{
+    vertical-align: middle;
+}
+/* CONTENT */
+
+.site-content{
+    height: 90%;
+    border-left: solid 1px grey;
+    border-right: solid 1px grey;
+
+    /* background-color: orange; */
+}
+
+.sidebar{
+    height: 100%;
+    border-right: solid 1px grey;
+
+    /* background-color: orchid; */
+}
+
+.home{
+    height: 100%;
+    /* background-color: purple; */
+}
+
+/* FOOTER */
+
+.site-footer{
+    height: 5%;
+    border: solid 1px grey;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    /* background-color: red; */
+}
+
+.site-footer > div{
+    height: 100%;
+}
