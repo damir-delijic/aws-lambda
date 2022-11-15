@@ -25,7 +25,12 @@ div {
 
 #headerMessageText{
     margin: 0px !important;
-    background-color: darkgrey;
+    font-weight: lighter;
+    /* background-color: #dcdcdc; */
+}
+
+#messageCount{
+    font-weight: lighter;
 }
 
 .site-header > div {

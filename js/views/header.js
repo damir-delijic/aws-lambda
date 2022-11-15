@@ -13,7 +13,7 @@ define("header", ["text!page/header.html"], function (Template) {
             this.currentMessageIndex = 0;
             this.messagesLength = this.messagesArray.length;
 
-            this.rotationTimeoutLength = 3;
+            this.rotationTimeoutLength = 10;
 
             this.render();
             this.manageRotationTimer();
@@ -101,10 +101,10 @@ define("header", ["text!page/header.html"], function (Template) {
         setHeaderMessage: function(isHeaderMessageNotSet){
             var headerMessage = document.getElementById('headerMessage');
             if(headerMessage){
-
+                var element = document.getElementById('headerMessageContainer');
                 if(isHeaderMessageNotSet){
                     headerMessage.classList.add('col' + '-' + columnSize + '-' + '8');
-                    var element = document.getElementById('headerMessageContainer');
+                  
                     if(element){
                         headerMessage.style.lineHeight = element.offsetHeight + 'px';
                         headerMessage.style.padding = '0px';
@@ -205,13 +205,23 @@ define("header", ["text!page/header.html"], function (Template) {
         },
 
         clearRotationTimeout: function(){
+            this.clearLoader();
             if(this.rotationTimeout){
                 clearTimeout(this.rotationTimeout)
             }
         },
 
+        clearLoader: function(){
+
+        },
+
+        animateLoader: function(){
+
+        },
+
         setRotationTimeout: function(){
             var that = this;
+            this.animateLoader();
             that.rotationTimeout = setTimeout(function(){
                 that.clearRotationTimeout();
                 that.startRotationAnimation();
